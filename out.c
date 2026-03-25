@@ -43,5 +43,16 @@ PALAVRA_RESERVADA    return            14    5
 NUMERAL              0                 14   12
 SEPARADOR            ;                 14   13
 SEPARADOR            }                 15    1
-COMENTARIO           eae tranquilo     15    2
-INDICADOR            sdsaweew          16    1
+COMENTARIO           big gib           15    2
+NUMERAL              0                 16    1
+NUMERAL              0                 16    3
+NUMERAL              0                 16    5
+NUMERAL              33                16    7
+INDICADOR            @                 16    9
+NUMERAL              5                 16   13
+NUMERAL              4                 16   18
+NUMERAL              0                 16   20
+OPERADOR             /                 17    1
+INDICADOR            freez             18    1
+OPERADOR             /                 19    2
+INDICADOR            sdsaweew          20    1

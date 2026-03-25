@@ -12,5 +12,9 @@ while(x>0){
 int main() {
     z = x + 10;
     return 0;
-}//eae tranquilo 
+}//big gib
+0.0.0.33@ = 5 -- 4 0+
+/*
+freez
+*/
 sdsaweew
