@@ -1,3 +1,10 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <regex.h>
+#include <string.h> 
+
+
+
 int x = 5;
 int z = 0;
 
