@@ -27,10 +27,6 @@ int ok_separador(char c) {
     return match("[(){};,]", c);
 }
 
-/*int ok_operador(char c) {
-    return match("[+\\-*//*=<>]", c);
-}*/
-
 int ok_operador(char c) {
     return strchr("+-*/=<>", c) != NULL;
 }
