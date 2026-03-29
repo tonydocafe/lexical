@@ -38,10 +38,10 @@ int ok_indicador(char c) {
 
 
 const char *reservadas[] = {
-    "if","else","while","for","return","int","float","char","void","#include","#define", "#ifdef"
+    "if","else","while","for","return","int","float","char","void","#include","#define", "#ifdef","printf","scanf"
 };
 
-int total_reservadas = 12;
+int total_reservadas = 14;
 
 int ok_reservada(const char *str){
     for(int i=0;i<total_reservadas;i++){
@@ -108,13 +108,13 @@ if (c == '#' && coluna == 1) {
 
         int erro = 0;
         while ((c = fgetc(in)) != EOF && c != term) {
-            // Marca erro 
+          
             if (!isalnum(c) && c != '.' && c != '_') erro = 1;
             token[idx++] = c;
             coluna++;
         }
 
-        // foi fechada 
+       
         if (c != term) erro = 1;
         if (c == term) token[idx++] = c;
 
@@ -159,7 +159,7 @@ if (c == '#' && coluna == 1) {
         }
 
         
-        if (isalpha(c) || c == '_'/*|| c == '#'*/) {
+        if (isalpha(c) || c == '_') {
             idx = 0;
             token[idx++] = c;
             while ((c = fgetc(in)) != EOF && (isalnum(c) || c == '_')) {
@@ -227,7 +227,7 @@ if (c == '#' && coluna == 1) {
         }
 
         
-        if (ok_separador(c)) {
+        if (ok_separador(c) || c == '[' || c == ']') {
             token[0] = c; token[1] = '\0';
             registrar(out, "SEPARADOR", token, linha, col_inicio);
             continue;

@@ -1,43 +1,30 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h> 
-
-#define MAX_TOKEN 256
-
-  
-"vamo fazendo alguns teste 
-"
-
-
-int x = 5;
-int z = 0;
-
-int num(x){
-
-    printf("O numero é: %d\n", x);
-while(x>0){
-    x--;     
-
-#include <stdio.h>
-#include "lexical.h"    
-    #fsvlfslvn3333
-}
+#include <stdio.h>  
 
 int main() {
-    z = x + 10;
-    return 0;
-}//big gib
-0.0.0.33@ = 5--40+
-/*
-freez
-*/
-sdsaweew
+    
+    int idade;
+    char nome[50];
 
+    
+    printf("Digite seu nome: ");
+    scanf("%49s", nome); 
 
-void tigix() {
-    int a = 10;
-    int b = 20;
-    int c = a + b;
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    
+    if (idade >= 18) {
+        printf("Olá %s, você é maior de idade!\n", nome);
+    } else {
+        printf("Olá %s, você é menor de idade!\n", nome);
+    }
+
+    
+    printf("Contando até 5:\n");
+    for (int i = 1; i <= 5; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    return 0; 
 }
-#include <stdio.h>
-#ifdef DEBUG
