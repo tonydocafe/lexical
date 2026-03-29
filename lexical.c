@@ -181,6 +181,10 @@ void analisar_arquivo(FILE *in, FILE *out){
             token[0]=c;
             token[1]='\0';
             registrar(out,"INDICADOR",token,linha,col_inicio);
+        } else {
+            token[0] = c;
+            token[1] = '\0';
+            registrar(out,"ERRO_LEXICO",token,linha,col_inicio);
         }
     }
 }
