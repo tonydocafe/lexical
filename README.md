@@ -53,12 +53,18 @@ Por fim, fecha os arquivos e exibe uma mensagem indicando que a análise foi con
 
 #### updates 
 
-O código reconhece corretamente diretivas do tipo #include e #define.
+- Compilação
 
-Após a leitura do #, o token completo é registrado como PALAVRA_RESERVADA.
-Em seguida, o próximo token (biblioteca <arquivo.h> ou identificador MAX_TOKEN) é lido sem perder caracteres, resolvendo problemas como a omissão da primeira letra.
+```bash
+make
 
-Bibliotecas entre < > ou " " são agora verificadas quanto a caracteres inválidos, registrando ERRO_LEXICO se houver problemas, registradas como INDICADOR .
+make run 
 
-Identificadores usados em diretivas (como MAX_TOKEN) também são lidos e registrados corretamente como INDICADOR.
+```
 
+Para limpar 
+
+```bash
+make clean
+
+```

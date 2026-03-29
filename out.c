@@ -11,9 +11,6 @@ INDICADOR            MAX_TOKEN          5    9
 NUMERAL              256                5   18
 LITERAL              vamo fazendo alguns teste 
     9    1
-OPERADOR             <                 11    1
-INDICADOR            OLA               11    2
-OPERADOR             >                 11    5
 PALAVRA_RESERVADA    int               12    1
 INDICADOR            x                 12    5
 OPERADOR             =                 12    7
