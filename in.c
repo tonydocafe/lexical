@@ -1,27 +1,30 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <regex.h>
-#include <string.h> 
+#include <stdio.h>  
 
-
-
-int x = 5;
-int z = 0;
-
-int num(x){
-
-    printf("O numero é: %d\n", x);
-while(x>0){
-    x--;     
-
-
-}
 int main() {
-    z = x + 10;
-    return 0;
-}//big gib
-0.0.0.33@ = 5 -- 4 0+
-/*
-freez
-*/
-sdsaweew
+    
+    int idade;
+    char nome[50];
+
+    
+    printf("Digite seu nome: ");
+    scanf("%49s", nome); 
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    
+    if (idade >= 18) {
+        printf("Olá %s, você é maior de idade!\n", nome);
+    } else {
+        printf("Olá %s, você é menor de idade!\n", nome);
+    }
+
+    
+    printf("Contando até 5:\n");
+    for (int i = 1; i <= 5; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    return 0; 
+}
