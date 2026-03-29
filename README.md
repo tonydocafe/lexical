@@ -50,3 +50,15 @@ O programa começa verificando se o usuário forneceu os arquivos de entrada e s
 Em seguida, abre o arquivo de entrada para leitura e o de saída para escrita, mostrando erros se não conseguir.
 Depois, chama a função analisar_arquivo para realizar a análise léxica do conteúdo.
 Por fim, fecha os arquivos e exibe uma mensagem indicando que a análise foi concluída.
+
+#### updates 
+
+O código reconhece corretamente diretivas do tipo #include e #define.
+
+Após a leitura do #, o token completo é registrado como PALAVRA_RESERVADA.
+Em seguida, o próximo token (biblioteca <arquivo.h> ou identificador MAX_TOKEN) é lido sem perder caracteres, resolvendo problemas como a omissão da primeira letra.
+
+Bibliotecas entre < > ou " " são agora verificadas quanto a caracteres inválidos, registrando ERRO_LEXICO se houver problemas, registradas como INDICADOR .
+
+Identificadores usados em diretivas (como MAX_TOKEN) também são lidos e registrados corretamente como INDICADOR.
+
