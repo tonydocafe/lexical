@@ -4,7 +4,8 @@
 #include <string.h>
 #include "lexical.h"
 
-#define MAX_TOKEN 256
+Token tokens[1000];
+int total_tokens = 0;
 
 
 
@@ -55,7 +56,21 @@ int ok_reservada(const char *str){
 
 void registrar(FILE *out, const char *classe, const char *token, int lin, int col){
     fprintf(out,"%-20s %-15s %4d %4d\n",classe,token,lin,col);
+    strcpy(tokens[total_tokens].classe, classe);
+    strcpy(tokens[total_tokens].lexema, token);
+    tokens[total_tokens].linha = lin;
+    tokens[total_tokens].coluna = col;
+    total_tokens++;
+//Debug: Imprime o token registrado
+    for(int i = 0; i < total_tokens; i++){
+        printf("Token %d: %s (%s)\n", i, tokens[i].lexema, tokens[i].classe);
+    }
 }
+
+
+
+
+
 
 void analisar_arquivo(FILE *in, FILE *out) {
     int c;
