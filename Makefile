@@ -17,9 +17,9 @@ $(EXEC): $(SRC)
 
 
 run: $(EXEC)
-	./$(EXEC) in.c out.c
+	./$(EXEC) in.c out.txt
 
 clean:
-	rm -f $(EXEC) *.o out.c
+	rm -f $(EXEC) *.o out.txt
 
 .PHONY: all run clean

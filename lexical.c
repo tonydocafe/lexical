@@ -28,7 +28,7 @@ int ok_separador(char c) {
 }
 
 int ok_operador(char c) {
-    return strchr("+-*/=<>", c) != NULL;
+    return strchr("+-*/=<>!&", c) != NULL;
 }
 
 int ok_indicador(char c) {
@@ -73,7 +73,7 @@ void analisar_arquivo(FILE *in, FILE *out) {
             coluna = 0;
             continue;
         }
-
+        
         if (isspace(c))
             continue;
 
@@ -242,6 +242,24 @@ if (c == '#' && coluna == 1) {
 
        
         if (ok_indicador(c)) {
+
+             char prox = fgetc(in);
+
+        if ((c == '>' && prox == '=') ||
+            (c == '<' && prox == '=') ||
+            (c == '=' && prox == '=') ||
+            (c == '+' && prox == '+') ||
+            (c == '-' && prox == '-')) {
+
+            token[0] = c;
+            token[1] = prox;
+            token[2] = '\0';
+            coluna++;
+        } else {
+            token[0] = c;
+            token[1] = '\0';
+            if (prox != EOF) ungetc(prox, in);
+        }
             token[0] = c; token[1] = '\0';
             registrar(out, "INDICADOR", token, linha, col_inicio);
             continue;

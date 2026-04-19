@@ -37,7 +37,7 @@ PALAVRA_RESERVADA    scanf             13    5
 SEPARADOR            (                 13   10
 LITERAL              %d                13   11
 SEPARADOR            ,                 13   14
-ERRO_LEXICO          &                 13   16
+OPERADOR             &                 13   16
 INDICADOR            idade             13   17
 SEPARADOR            )                 13   22
 SEPARADOR            ;                 13   23
