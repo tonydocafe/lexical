@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lexical.h"
 #include "parse.h"
-
+#include "ast.h"
 
 
 int main(int argc, char *argv[]) {
@@ -31,7 +31,12 @@ int main(int argc, char *argv[]) {
     
 
 
-    programa();
+    printf("\nConstruindo Arvore Sintatica...\n");
+    AST *minha_arvore = programa();
+
+    
+    printf("\n--- RESULTADO DA AST ---\n");
+    print_ast(minha_arvore, 0);
     printf("Analise lexica concluida.\nArvore sintatica impressa.\n");
 
     return 0;
