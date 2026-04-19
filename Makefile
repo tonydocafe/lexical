@@ -2,7 +2,7 @@
 EXEC = lex
 
 
-SRC = main.c lexical.c
+SRC = main.c lexical.c parse.c
 
 
 CC = gcc

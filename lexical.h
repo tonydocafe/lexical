@@ -22,4 +22,5 @@ extern int total_tokens;
 
 void analisar_arquivo(FILE *in, FILE *out);
 
+
 #endif

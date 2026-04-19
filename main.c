@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include "lexical.h"
+#include "parse.h"
+
+
 
 int main(int argc, char *argv[]) {
 
@@ -25,8 +28,11 @@ int main(int argc, char *argv[]) {
 
     fclose(entrada);
     fclose(saida);
+    
 
-    printf("Analise lexica concluida.\n");
+
+    programa();
+    printf("Analise lexica concluida.\nArvore sintatica impressa.\n");
 
     return 0;
 }

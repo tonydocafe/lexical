@@ -61,10 +61,7 @@ void registrar(FILE *out, const char *classe, const char *token, int lin, int co
     tokens[total_tokens].linha = lin;
     tokens[total_tokens].coluna = col;
     total_tokens++;
-//Debug: Imprime o token registrado
-    for(int i = 0; i < total_tokens; i++){
-        printf("Token %d: %s (%s)\n", i, tokens[i].lexema, tokens[i].classe);
-    }
+
 }
 
 
@@ -293,3 +290,10 @@ if (c == '#' && coluna == 1) {
         if (c != EOF) ungetc(c, in);
     }
 }
+
+
+
+
+
+
+
